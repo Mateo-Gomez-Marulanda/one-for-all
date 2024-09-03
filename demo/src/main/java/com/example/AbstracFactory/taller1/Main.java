@@ -18,8 +18,13 @@ public class Main {
         ISmartphone genericSmartphone = genericFactory.createSmartphone();
         System.out.println(genericSmartphone);
         genericSmartphone.call();
-       
-        
+
+        // implementacion del prototype
+       ISmartphone samsungSmartphone2 = samsungsmartphone.clonar(); 
+       samsungSmartphone2.call();
+
+       ISmartphone genericSmartphone2 = genericSmartphone.clonar();
+        genericSmartphone2.call();
         
         
     

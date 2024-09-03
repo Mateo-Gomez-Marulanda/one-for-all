@@ -20,6 +20,10 @@ public class SamsungSmartphone implements ISmartphone {
         System.out.println("calling");
     }
 
+    public SamsungSmartphone clonar(){
+        return new SamsungSmartphone(this.model, this.storage, this.ram, this.os, this.resolucion);
+    }
+
     @Override
     public String toString() {
         return "Samsung Smartphone [model=" + model + ", storage=" + storage + ", ram=" + ram + ", OS=" + os + ", resolucion="

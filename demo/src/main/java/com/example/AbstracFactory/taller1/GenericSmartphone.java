@@ -19,6 +19,10 @@ public class GenericSmartphone implements ISmartphone{
         System.out.println("calling");
     }
 
+    public GenericSmartphone clonar(){
+        return new GenericSmartphone(this.model, this.storage, this.ram, this.os, this.resolucion);
+    }
+
     @Override
     public String toString() {
         return "GenericSmartphone [model=" + model + ", storage=" + storage + ", ram=" + ram + ", os=" + os
