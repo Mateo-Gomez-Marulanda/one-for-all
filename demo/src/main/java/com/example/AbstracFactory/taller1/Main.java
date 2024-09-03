@@ -1,20 +1,27 @@
 package com.example.AbstracFactory.taller1;
 
 import com.example.AbstracFactory.taller1.factories.*;
+import com.example.AbstracFactory.taller1.factories.GenericFactory;
 import com.example.AbstracFactory.taller1.factories.SamsungFactory;
 
 public class Main {
     public static void main(String[] args) {
-       
-
+       //implementacion del factory method
+        IDeviceFactory samsungFactory = new SamsungFactory();
+        IDeviceFactory genericFactory = new GenericFactory();
         
-        SamsungFactory samsungSmartPhone = new SmartPhoneBuilder()
-        .setModel(null)
-        .setOS(null)
-        .setRam(null)
-        .setResolucion(null)
-        .setStorage(null)
-        .buildSamsungBuilder();
+        // implementacion del builder
+        ISmartphone samsungsmartphone = samsungFactory.createSmartphone();
+        System.out.println(samsungsmartphone);
+        samsungsmartphone.call();
+
+        ISmartphone genericSmartphone = genericFactory.createSmartphone();
+        System.out.println(genericSmartphone);
+        genericSmartphone.call();
+       
+        
+        
+        
     
         
 

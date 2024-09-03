@@ -14,11 +14,11 @@ public class SamsungFactory implements IDeviceFactory {
 
     public ISmartphone createSmartphone() {
         return new SmartphoneBuilder()
-            .setModel(null)
-            .setOS(null)
-            .setRam(null)
-            .setResolucion(null)
-            .setStorage(null)
-            .buildSamsungSmartphone();
+        .setModel("Galaxy j2 prime")
+        .setOS("Android")
+        .setRam("1Gb")
+        .setResolucion("20 Mp")
+        .setStorage("8Gb")
+        .buildSamsungSmartphone();
     }
 }
