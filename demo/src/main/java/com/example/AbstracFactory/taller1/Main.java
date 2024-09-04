@@ -6,7 +6,8 @@ import com.example.AbstracFactory.taller1.factories.SamsungFactory;
 
 public class Main {
     public static void main(String[] args) {
-       //implementacion del factory method
+      
+        //implementacion del factory method
         IDeviceFactory samsungFactory = new SamsungFactory();
         IDeviceFactory genericFactory = new GenericFactory();
         
