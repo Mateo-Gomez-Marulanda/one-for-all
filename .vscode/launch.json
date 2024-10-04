@@ -8,6 +8,48 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Decorator.taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Composite.taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Adapter.taller3.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Proxy.Taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Proxy.Taller0.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Proxy.Taller1.App",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "com.example.PatronesEstructurales.Decorator.taller1.Main",
             "projectName": "demo"
         },
