@@ -14,7 +14,8 @@ class RealDataBase implements DataBase {
 class Proxy implements DataBase {
     private RealDataBase dataBase;
 
-    public Proxy() {}
+    public Proxy() {
+    }
 
     @Override
     public void query(String sql) {
