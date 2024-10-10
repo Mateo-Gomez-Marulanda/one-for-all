@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "com.example.PatronesEstructurales.Adapter.taller4.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "com.example.PatronesEstructurales.Proxy.taller3.Main",
             "projectName": "demo"
         },

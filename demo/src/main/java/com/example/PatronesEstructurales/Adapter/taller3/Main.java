@@ -46,8 +46,12 @@ public class Main {
         Device phone = new Phone();
         Device laptop =  new Laptop();
 
-        ChargerAdapter adapter = new ChargerAdapter(laptop);
+        ChargerAdapter laptopAdapter = new ChargerAdapter(laptop);
+        laptopAdapter.chargeDevice();
 
-        
+
+        ChargerAdapter phoneAdapter = new ChargerAdapter(phone);
+        phoneAdapter.chargeDevice();
+
     }
 }
