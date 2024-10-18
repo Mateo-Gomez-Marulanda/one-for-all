@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "com.example.PatronesComportamentales.ChainOfResponsability.taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.PatronesComportamentales.ChainOfResponsability.taller1.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.example.PatronesComportamentales.ChainOfResponsability.taller0.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "com.example.PatronesEstructurales.Adapter.taller4.Main",
             "projectName": "demo"
         },
