@@ -14,10 +14,10 @@ class TextoSimple extends EditorTexto {
 }
 
 abstract class DecoratorTexto extends EditorTexto {
-    protected EditorTexto editorTextotexto;
+    protected EditorTexto editorTexto;
 
     public DecoratorTexto(EditorTexto editorTexto) {
-        this.editorTextotexto = editorTexto;
+        this.editorTexto = editorTexto;
     }
 
     @Override
@@ -32,7 +32,7 @@ class ConversionMayusculas extends DecoratorTexto {
 
     @Override
     public String procesarTexto(String texto) {
-        return texto.toUpperCase();
+        return editorTexto.procesarTexto(texto).toUpperCase();
     }
 }
 
@@ -47,21 +47,22 @@ class CorreccionOrtografia extends DecoratorTexto {
     }
 }
 
-
 public class Main {
     public static void main(String[] args) {
 
         String texto = "hola mundo";
 
         EditorTexto editorTexto = new TextoSimple();
-
-        editorTexto = new ConversionMayusculas(editorTexto);
         System.out.println(editorTexto.procesarTexto(texto));
-       
-        // inprimir cantidad letras
-        System.out.println(texto.length());
 
-        editorTexto = new CorreccionOrtografia(editorTexto);
-        System.out.println(editorTexto.procesarTexto(texto));
+        EditorTexto textoMayusculas = new ConversionMayusculas(new TextoSimple());
+        System.out.println(textoMayusculas.procesarTexto(texto));
+
+        EditorTexto correccionTexto = new CorreccionOrtografia(new TextoSimple());
+        System.out.println(correccionTexto.procesarTexto(texto));
+
+        EditorTexto textoCompleto = new ConversionMayusculas(new CorreccionOrtografia(new TextoSimple()));
+
+        System.out.println(textoCompleto.procesarTexto(texto));
     }
 }

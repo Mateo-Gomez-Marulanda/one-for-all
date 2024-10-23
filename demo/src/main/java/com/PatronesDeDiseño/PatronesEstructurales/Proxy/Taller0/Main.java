@@ -23,19 +23,16 @@ class RealReport implements Report {
     public void displayReport() {
         System.out.println("displaying report " + reportContent);
     }
-
 }
 
 // se crea clase proxy
 class ReportProxy implements Report {
     private RealReport realReport;
 
-    public ReportProxy(){}
-    
-    //metodo para saber si el reporte ya existe
+    // metodo para saber si el reporte ya existe
     @Override
-    public void displayReport(){
-        if(realReport == null){
+    public void displayReport() {
+        if (realReport == null) {
             realReport = new RealReport();
         }
         realReport.displayReport();
@@ -44,8 +41,9 @@ class ReportProxy implements Report {
 
 public class Main {
     public static void main(String[] args) {
-        //implementacion de Proxy
+        // implementacion de Proxy
         Report report = new ReportProxy();
+        report.displayReport();
         System.out.println(report);
     }
 }

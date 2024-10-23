@@ -12,7 +12,7 @@ abstract class Cafe {
 class CafeSimple extends Cafe {
     @Override
     public String getDescripcion() {
-        return "Cafe simple";
+        return "Cafe simple ";
     }
 
     @Override
@@ -42,7 +42,7 @@ class ConLeche extends DecoratorCafe {
 
     @Override
     public String getDescripcion() {
-        return cafe.getDescripcion() + "con leche";
+        return cafe.getDescripcion() + " con leche ";
     }
 
     @Override
@@ -59,7 +59,7 @@ class ConCrema extends DecoratorCafe {
 
     @Override
     public String getDescripcion() {
-        return cafe.getDescripcion() + "con crema";
+        return cafe.getDescripcion() + " con crema ";
     }
 
     @Override
@@ -72,13 +72,12 @@ public class Main {
     public static void main(String[] args) {
 
         Cafe cafe = new CafeSimple();
+        System.out.println(cafe.getDescripcion() + cafe.precio());
 
-        cafe = new ConLeche(cafe);
-        System.out.println(cafe.getDescripcion());
-        System.out.println(cafe.precio());
+        Cafe cafeConLeche = new ConLeche(new CafeSimple());
+        System.out.println(cafeConLeche.getDescripcion() + cafeConLeche.precio());
 
-        cafe = new ConCrema(cafe);
-        System.out.println(cafe.getDescripcion());
-        System.out.println(cafe.precio());
+        Cafe cafeConTodo = new ConCrema(new ConLeche(new CafeSimple()));
+        System.out.println(cafeConTodo.getDescripcion() + cafeConTodo.precio());
     }
 }

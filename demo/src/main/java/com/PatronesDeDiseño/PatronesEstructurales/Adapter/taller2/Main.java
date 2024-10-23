@@ -10,7 +10,7 @@ public class Main {
         
         Cliente cliente = new Cliente(paypal,stripe);
 
-        cliente.realizarEnvio(paypalAdapter.adaptarEnvio());
-        cliente.hacerTransaccion(stripeAdapter.AdaptarTransaccion());
+        cliente.realizarEnvio(paypalAdapter.adaptarEnvio(7));
+        cliente.hacerTransaccion(stripeAdapter.AdaptarTransaccion(7));
     }
 }

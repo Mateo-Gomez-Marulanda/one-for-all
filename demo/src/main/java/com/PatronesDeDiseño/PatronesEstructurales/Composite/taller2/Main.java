@@ -1,9 +1,11 @@
 package com.PatronesDeDiseño.PatronesEstructurales.Composite.taller2;
 import java.util.List;
+
 import java.util.ArrayList;
 
 interface FileSystemComponent{
     double getSize();
+    String getName();
     
 }
 
@@ -19,6 +21,16 @@ class File implements FileSystemComponent{
     @Override
     public double getSize(){
         return size;
+    }
+
+    @Override
+    public String getName(){
+        return name;
+    }
+
+    @Override
+    public String toString() {
+        return "File [name=" + name + ", size=" + size + "]";
     }
 }
 
@@ -42,18 +54,29 @@ class Directory implements FileSystemComponent{
         return size;
     }
 
-    public double getTotalSizw(){
-        int totalSize = 0;
+    @Override
+    public String getName(){
+        return name;
+    }
+
+    public double getTotalSize(){
+        double totalSize = 0;
         for (FileSystemComponent archivo : archivos) {
             totalSize += archivo.getSize();
+            System.out.println(totalSize);
         }
         return totalSize;
+    }
+
+    public void ConsultarArchivos(){
+        System.out.println(archivos);
     }
     
 }
 
 public class Main {
     public static void main(String[] args) {
+
         FileSystemComponent file1 = new File("tarea1", 34.9);
         FileSystemComponent file2  = new File("tarea2", 24.0);
 
@@ -62,7 +85,13 @@ public class Main {
         directory.addFile(file1);
         directory.addFile(file2);
 
-        System.out.println(directory);
+        directory.getTotalSize();
+        directory.ConsultarArchivos();
+        
+        
+
+
+
 
     }
 }

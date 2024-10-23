@@ -8,6 +8,69 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Decorator.taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Decorator.taller1.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Decorator.taller0.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Proxy.taller3.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Proxy.Taller1.App",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Proxy.Taller0.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Composite.taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Adapter.taller3.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Adapter.taller2.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "com.PatronesDeDiseño.PatronesComportamentales.Observer.Taller1.Main",
             "projectName": "demo"
         },

@@ -30,7 +30,7 @@ class EmailNotifier extends NotifierDecorator {
 
     @Override
     public String sendNotification(String notification) {
-        return notification + " Sending notification by email";
+        return notifier.sendNotification(notification) + " Sending notification by email";
     }
 }
 
@@ -41,7 +41,7 @@ class SMSNotifier extends NotifierDecorator {
 
     @Override
     public String sendNotification(String notification) {
-        return notification + " Sending notification by SMS";
+        return notifier.sendNotification(notification) + " Sending notification by SMS";
     }
 }
 
@@ -52,7 +52,7 @@ class PushNotifier extends NotifierDecorator {
 
     @Override
     public String sendNotification(String notification) {
-        return notification + " Sending notification by push";
+        return notifier.sendNotification(notification) + " Sending notification by push";
     }
 }
 
@@ -61,14 +61,18 @@ public class Main {
         String notification = "hola como estas";
 
         Notifier notifier = new SimpleNotifier();
-
-        notifier = new EmailNotifier(notifier);
         System.out.println(notifier.sendNotification(notification));
 
-        notifier = new SMSNotifier(notifier);
-        System.out.println(notifier.sendNotification(notification));
+        Notifier email = new EmailNotifier(new SimpleNotifier());
+        System.out.println(email.sendNotification(notification));
 
-        notifier = new PushNotifier(notifier);
-        System.out.println(notifier.sendNotification(notification));
+        Notifier sms = new SMSNotifier(new SimpleNotifier());
+        System.out.println(sms.sendNotification(notification));
+
+        Notifier push = new PushNotifier(new SimpleNotifier());
+        System.out.println(push.sendNotification(notification));
+
+        Notifier multiple = new EmailNotifier(new PushNotifier(new SMSNotifier(new SimpleNotifier())));
+        System.out.println(multiple.sendNotification(notification));
     }
 }
