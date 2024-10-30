@@ -4,7 +4,7 @@ package com.PatronesDeDiseño.PatronesComportamentales.Strategy.taller0;
 
 // interfaz para la creacion de estrategias 
 interface TransportMethod {
-    double calculateShippingCost();
+    double calculateShippingCost(); 
 }
 
 // estrategias concretas
@@ -64,7 +64,7 @@ class ShippingService {
         if (transportMethod != null) {
             return transportMethod.calculateShippingCost();
         } else {
-            throw new IllegalArgumentException("\"Error: metodo de envio no es correcto\"");
+            throw new IllegalArgumentException("\"Error: metodo de envio no es correcto\""); //excepcion en caso de ingresar un dato no valido
         }
     }
 
