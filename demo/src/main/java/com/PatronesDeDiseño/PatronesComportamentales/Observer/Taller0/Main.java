@@ -31,6 +31,7 @@ class EstacionClima {
 
     public void setTemperatura(int temperatura) {
         this.temperatura = temperatura;
+        notificar();
 
     }
 }
@@ -53,8 +54,8 @@ public class Main {
         Observer display = new Display();
         EstacionClima estacion = new EstacionClima();
 
-        display.update(23);
         estacion.agregarObserver(display);
-        estacion.notificar();
+        display.update(23);
+        estacion.setTemperatura(34);
     }
 }

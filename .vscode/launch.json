@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesComportamentales.Strategy.taller0.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Bridge.taller4.Main",
+            "projectName": "demo"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "com.PatronesDeDiseño.PatronesEstructurales.Decorator.taller2.Main",
             "projectName": "demo"
         },
