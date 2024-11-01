@@ -103,6 +103,8 @@ public class Main {
         Command encenderVentilador = new Encender(ventilador);
         Command encenderCalefaccion = new Encender(calefaccion);
 
+        
+
         Controlador controlador = new Controlador(encenderVentilador);
         controlador.presionarBoton();
         controlador.setCommand(encenderCalefaccion);
