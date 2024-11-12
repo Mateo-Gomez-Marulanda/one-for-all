@@ -150,7 +150,8 @@ class Editor {
 
     public void procesar(ComandoEditar comando) {
         manejador.manejar(comando);
-    }
+    }  
+
 }
 
 public class Main {
